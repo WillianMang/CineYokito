@@ -8,45 +8,25 @@
 
 import UIKit
 
-class PeliculaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PeliculaViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tblPeliculas: UITableView!
 
-    var arrayPelicula = NSMutableArray()
+    var arrayPeliculas = NSMutableArray()
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
-    
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrayPelicula.count
+    
+        return self.arrayPeliculas.count
+    
     }
     
-    func tableView(_ tanbleView : UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cellIdentifier = "PeliculaTableViewCEll"
-        
-        let cell = tanbleView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PeliculaTableViewCell
-        cell.objPelicula = self.arrayPelicula[indexPath.row] as? Pelicula
-        cell.actualizarData()
-        
-        return cell
-        
-        
-    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    
-        PeliculasBC.listarPelicula{ (arrayPelicula) in
-            self.arrayPelicula = arrayPelicula
-            self.tblPeliculas.reloadData()
-        }
-    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         
@@ -58,15 +38,5 @@ class PeliculaViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

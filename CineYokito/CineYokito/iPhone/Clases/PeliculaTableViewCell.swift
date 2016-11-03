@@ -14,19 +14,10 @@ class PeliculaTableViewCell: UITableViewCell {
     @IBOutlet weak var lblPelicula: UILabel!
     @IBOutlet weak var imgPelicula: UIImageView!
     
-    var objPelicula : Pelicula?
     
-    func actualizarData() {
+    func actualizarData(){
         
-        self.lblPelicula.text = self.objPelicula?.pelicula_nombre!
-        
-        CDMImagenDownloaded.descargarImagen(enURL: self.objPelicula?.pelicula_urlImagen, paraImageView : self.imgPelicula, conPlaceHolder: nil) {
-            (esCorrecto, nombreImagen, imagen) in
-            
-            self.imgPelicula.image = imagen
-        }
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
