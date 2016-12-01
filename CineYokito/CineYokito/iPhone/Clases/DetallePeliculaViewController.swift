@@ -24,13 +24,13 @@ class DetallePeliculaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        CDMImagenDownloaded.descargaImagen(enURL: self.objPelicula?.peli_urlImagen, paraImagenView: self.imgPelicula, conPlaceHolder: nil) { (esCorrecto, nombreImagen, image) in
+        CDMImagenDownloaded.descargaImagen(enURL: self.objPelicula.peli_urlImagen, paraImagenView: self.imgPelicula, conPlaceHolder: nil) { (esCorrecto, nombreImagen, image) in
             
             self.imgPelicula.image = image
         }
         
-        self.lblNombre.text = self.objPelicula.peli_nombre!
-        self.lblResumen.text = self.objPelicula.peli_resumen!
+        self.lblNombre.text = self.objPelicula.peli_nombre
+        self.lblResumen.text = self.objPelicula.peli_resumen
         
     
     }
