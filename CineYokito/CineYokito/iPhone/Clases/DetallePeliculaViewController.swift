@@ -14,21 +14,23 @@ class DetallePeliculaViewController: UIViewController {
     @IBOutlet weak var imgPelicula: UIImageView!
     @IBOutlet weak var lblNombre: UILabel!
     @IBOutlet weak var lblResumen: UILabel!
-    @IBOutlet weak var lblGenero: UILabel!
+    
+   
     
     var arrayPelicula: NSMutableArray?
-    var objPelicula = PeliculasBE()
+    var objPelicula : Pelicula!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        CDMImagenDownloaded.descargaImagen(enURL: self.objPelicula.peli_urlImagen, paraImagenView: self.imgPelicula, conPlaceHolder: nil) { (esCorrecto, nombreImagen, image) in
+        CDMImagenDownloaded.descargaImagen(enURL: self.objPelicula?.peli_urlImagen, paraImagenView: self.imgPelicula, conPlaceHolder: nil) { (esCorrecto, nombreImagen, image) in
             
             self.imgPelicula.image = image
         }
         
         self.lblNombre.text = self.objPelicula.peli_nombre!
+        self.lblResumen.text = self.objPelicula.peli_resumen!
         
     
     }

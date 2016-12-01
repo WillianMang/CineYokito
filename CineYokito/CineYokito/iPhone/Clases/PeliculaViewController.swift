@@ -23,7 +23,7 @@ class PeliculaViewController: UIViewController, UITableViewDelegate, UITableView
             self.arrayPeliculaTabla = self.arrayPeliculas
         }else{
             
-            let predicado = NSPredicate(format: "nombre CONTAINS[c] %@", searchText)
+            let predicado = NSPredicate(format: "peli_nombre CONTAINS[c] %@", searchText)
             let arrayResultado = NSMutableArray(array: self.arrayPeliculas.filtered(using: predicado))
             self.arrayPeliculaTabla =  arrayResultado
         }
@@ -63,10 +63,10 @@ class PeliculaViewController: UIViewController, UITableViewDelegate, UITableView
         return 80
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.performSegue(withIdentifier: "DetallePeliculaViewController", sender: self.arrayPeliculaTabla[indexPath.row])
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        self.performSegue(withIdentifier: "DetallePeliculaViewController", sender: self.arrayPeliculaTabla[indexPath.row])
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
