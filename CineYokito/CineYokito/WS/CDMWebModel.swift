@@ -70,6 +70,6 @@ class CDMWebModel: NSObject {
             
             completion(arrayPeliculasRespuestaBE, arraySucusalesRespuestaBE, arrayHorariosRespuestaBE)
         }
-    }
     
+    }
 }

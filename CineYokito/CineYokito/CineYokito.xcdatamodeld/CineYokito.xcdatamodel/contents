@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Director" representedClassName=".Director" syncable="YES">
-        <attribute name="director_id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="director_nombre" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="pelicula" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pelicula" inverseName="director" inverseEntity="Pelicula" syncable="YES"/>
-    </entity>
     <entity name="Horario" representedClassName=".Horario" syncable="YES">
         <attribute name="horario_horario" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pelicula" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pelicula" inverseName="horario" inverseEntity="Pelicula" syncable="YES"/>
         <relationship name="sucursal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sucursal" inverseName="horario" inverseEntity="Sucursal" syncable="YES"/>
     </entity>
     <entity name="Pelicula" representedClassName=".Pelicula" syncable="YES">
+        <attribute name="peli_director" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="peli_fecha" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="peli_genero" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="peli_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="peli_nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="peli_resumen" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="peli_urlImagen" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="director" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Director" inverseName="pelicula" inverseEntity="Director" syncable="YES"/>
         <relationship name="horario" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Horario" inverseName="pelicula" inverseEntity="Horario" syncable="YES"/>
-        <relationship name="resumen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resumen" inverseName="pelicula" inverseEntity="Resumen" syncable="YES"/>
-    </entity>
-    <entity name="Resumen" representedClassName=".Resumen" syncable="YES">
-        <attribute name="resumen_id" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="pelicula" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pelicula" inverseName="resumen" inverseEntity="Pelicula" syncable="YES"/>
     </entity>
     <entity name="Sucursal" representedClassName=".Sucursal" syncable="YES">
         <attribute name="sucursal_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,10 +21,8 @@
         <relationship name="horario" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Horario" inverseName="sucursal" inverseEntity="Horario" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Horario" positionX="-432" positionY="-522" width="128" height="90"/>
-        <element name="Pelicula" positionX="-153" positionY="-630" width="128" height="178"/>
-        <element name="Sucursal" positionX="-765" positionY="-441" width="128" height="90"/>
-        <element name="Resumen" positionX="-477" positionY="-235" width="128" height="73"/>
-        <element name="Director" positionX="-333" positionY="-720" width="128" height="88"/>
+        <element name="Horario" positionX="-549" positionY="-594" width="128" height="90"/>
+        <element name="Pelicula" positionX="-153" positionY="-630" width="128" height="163"/>
+        <element name="Sucursal" positionX="-794" positionY="-774" width="128" height="90"/>
     </elements>
 </model>

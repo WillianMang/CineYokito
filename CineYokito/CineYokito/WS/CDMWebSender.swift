@@ -12,8 +12,7 @@ class CDMWebSender: NSObject {
     
 
     
-    //MARK:- Configuración
-    
+   
     class func crearCabeceraPeticion() -> NSDictionary {
         
         let diccionarioHeader = NSMutableDictionary()
@@ -52,10 +51,6 @@ class CDMWebSender: NSObject {
         return diccionarioHeader
     }
     
-    
-    
-    
-    //MARK: - Tratado de respuesta
     
     
     class func obtenerRespuestaEnJSON(conData data : Data) -> Any? {
@@ -223,19 +218,6 @@ class CDMWebSender: NSObject {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-
-    //MARK: - Consumo de servicios con token
-    
-    
-    
-    
     class func doPOSTTokenToURL(conURL url : NSString, conPath path : NSString, conParametros parametros : Any?, conToken token : NSString, conCompletion completion : @escaping (_ objRespuesta : CDMWebResponse) -> Void) -> URLSessionDataTask {
         
         let configuracionSesion = URLSessionConfiguration.default
@@ -312,14 +294,6 @@ class CDMWebSender: NSObject {
         return postDataTask
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
     class func doPUTTokenToURL(conURL url : NSString, conPath path : NSString, conParametros parametros : Any?, conToken token : NSString, conCompletion completion : @escaping (_ objRespuesta : CDMWebResponse) -> Void) -> URLSessionDataTask {
         
         let configuracionSesion = URLSessionConfiguration.default
@@ -354,20 +328,6 @@ class CDMWebSender: NSObject {
         postDataTask.resume()
         return postDataTask
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //MARK: - Consumo de servicios simple
-    
     
     
     class func doPOSTToURL(conURL url : NSString, conPath path : NSString, conParametros parametros : Any?, conCompletion completion : @escaping (_ objRespuesta : CDMWebResponse) -> Void) -> URLSessionDataTask {
@@ -405,13 +365,7 @@ class CDMWebSender: NSObject {
         return postDataTask
     }
     
-    
-    
-    
-    
-    
-    
-    class func doGETToURL(conURL url : NSString, conPath path : NSString, conParametros parametros : Any?, conCompletion completion : @escaping (_ objRespuesta : CDMWebResponse) -> Void) -> URLSessionDataTask {
+    @discardableResult class func doGETToURL(conURL url : NSString, conPath path : NSString, conParametros parametros : Any?, conCompletion completion : @escaping (_ objRespuesta : CDMWebResponse) -> Void) -> URLSessionDataTask {
         
         let configuracionSesion = URLSessionConfiguration.default
         configuracionSesion.httpAdditionalHeaders = self.crearCabeceraPeticion() as? [AnyHashable: Any]
@@ -445,13 +399,6 @@ class CDMWebSender: NSObject {
         postDataTask.resume()
         return postDataTask
     }
-    
-    
-    
-    
-    
-    
-    
     
     class func doPUTToURL(conURL url : NSString, conPath path : NSString, conParametros parametros : Any?, conCompletion completion : @escaping (_ objRespuesta : CDMWebResponse) -> Void) -> URLSessionDataTask {
         

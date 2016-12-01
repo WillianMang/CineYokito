@@ -71,6 +71,9 @@
                                     <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="wrA-0v-RCb" id="8rW-j3-PYR"/>
+                                    </connections>
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PeliculaTableViewCell" rowHeight="81" id="eWa-DX-Qax" customClass="PeliculaTableViewCell" customModule="CineYokito" customModuleProvider="target">
@@ -96,6 +99,7 @@
                                         <connections>
                                             <outlet property="imgPelicula" destination="pW7-6N-gA1" id="RdO-2o-cHa"/>
                                             <outlet property="lblPelicula" destination="567-r2-2UR" id="DG0-qi-URc"/>
+                                            <segue destination="lmq-27-DtL" kind="show" identifier="DetallePeliculaViewController" id="AtI-kq-WsA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,12 +119,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Peliculas" id="fft-dZ-2Xf"/>
                     <connections>
+                        <outlet property="searchBar" destination="Cwp-DO-tPA" id="uOS-fj-Rbv"/>
                         <outlet property="tblPelicula" destination="4SC-Xh-miU" id="H8v-x8-ev1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBA-aF-bg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668.75" y="-1298.2394366197184"/>
+            <point key="canvasLocation" x="1845" y="-1297"/>
         </scene>
         <!--Detalle Pelicula View Controller-->
         <scene sceneID="Z1T-Yv-BGa">
@@ -168,7 +173,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2pK-c9-iZ8" firstAttribute="top" secondItem="q9W-mb-8HL" secondAttribute="bottom" constant="19" id="3u1-lI-A5o"/>
-                            <constraint firstItem="60V-x1-pmh" firstAttribute="top" secondItem="Jir-Mq-oqz" secondAttribute="bottom" constant="25" id="5rV-ZJ-B4F"/>
+                            <constraint firstItem="60V-x1-pmh" firstAttribute="top" secondItem="Jir-Mq-oqz" secondAttribute="bottom" constant="34" id="5rV-ZJ-B4F"/>
                             <constraint firstAttribute="trailing" secondItem="2pK-c9-iZ8" secondAttribute="trailing" constant="16" id="876-Zy-Iv3"/>
                             <constraint firstItem="xVI-Wl-1KZ" firstAttribute="leading" secondItem="dbo-YH-aWL" secondAttribute="leading" constant="16" id="Fgr-T0-a0s"/>
                             <constraint firstItem="2pK-c9-iZ8" firstAttribute="leading" secondItem="dbo-YH-aWL" secondAttribute="leading" constant="16" id="H7h-8r-rVg"/>
@@ -176,13 +181,13 @@
                             <constraint firstItem="60V-x1-pmh" firstAttribute="leading" secondItem="dbo-YH-aWL" secondAttribute="leading" constant="66" id="KJl-oV-sC5"/>
                             <constraint firstItem="60V-x1-pmh" firstAttribute="centerX" secondItem="dbo-YH-aWL" secondAttribute="centerX" id="LnX-5p-NYD"/>
                             <constraint firstItem="q9W-mb-8HL" firstAttribute="leading" secondItem="dbo-YH-aWL" secondAttribute="leading" constant="16" id="Ly2-70-nnO"/>
-                            <constraint firstItem="q9W-mb-8HL" firstAttribute="top" secondItem="60V-x1-pmh" secondAttribute="bottom" constant="26" id="ZSH-a7-ifS"/>
+                            <constraint firstItem="q9W-mb-8HL" firstAttribute="top" secondItem="60V-x1-pmh" secondAttribute="bottom" constant="17" id="ZSH-a7-ifS"/>
                             <constraint firstAttribute="trailing" secondItem="q9W-mb-8HL" secondAttribute="trailing" constant="16" id="j1s-Kq-ZPW"/>
                             <constraint firstItem="xVI-Wl-1KZ" firstAttribute="top" secondItem="2pK-c9-iZ8" secondAttribute="bottom" constant="16" id="jKP-Qe-PhH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imgImagen" destination="60V-x1-pmh" id="jl6-Ey-iyq"/>
+                        <outlet property="imgPelicula" destination="60V-x1-pmh" id="SJD-bZ-Arm"/>
                         <outlet property="lblGenero" destination="xVI-Wl-1KZ" id="Ouw-at-9Jm"/>
                         <outlet property="lblNombre" destination="q9W-mb-8HL" id="UdG-hy-aYD"/>
                         <outlet property="lblResumen" destination="2pK-c9-iZ8" id="gDH-Ak-xfi"/>
@@ -190,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSB-yT-Ofa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2455.1999999999998" y="-1297.6011994002999"/>
+            <point key="canvasLocation" x="2771" y="-1297"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="08U-iU-kuH">

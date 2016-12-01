@@ -22,9 +22,8 @@ extension Pelicula {
     @NSManaged public var peli_nombre: String?
     @NSManaged public var peli_resumen: String?
     @NSManaged public var peli_urlImagen: String?
-    @NSManaged public var director: Director?
+    @NSManaged public var peli_director: String?
     @NSManaged public var horario: NSSet?
-    @NSManaged public var resumen: Resumen?
 
 }
 

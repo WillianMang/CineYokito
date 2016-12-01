@@ -10,16 +10,27 @@ import UIKit
 
 class DetallePeliculaViewController: UIViewController {
 
-    @IBOutlet weak var imgImagen: UIImageView!
+    
+    @IBOutlet weak var imgPelicula: UIImageView!
     @IBOutlet weak var lblNombre: UILabel!
     @IBOutlet weak var lblResumen: UILabel!
     @IBOutlet weak var lblGenero: UILabel!
+    
+    var arrayPelicula: NSMutableArray?
+    var objPelicula = PeliculasBE()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        CDMImagenDownloaded.descargaImagen(enURL: self.objPelicula.peli_urlImagen, paraImagenView: self.imgPelicula, conPlaceHolder: nil) { (esCorrecto, nombreImagen, image) in
+            
+            self.imgPelicula.image = image
+        }
+        
+        self.lblNombre.text = self.objPelicula.peli_nombre!
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,14 +39,5 @@ class DetallePeliculaViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }
