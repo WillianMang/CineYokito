@@ -10,15 +10,11 @@ import UIKit
 
 class PeliculasBE: NSObject {
 
-    var peli_idPeli     : String?
+    var peli_fecha: String?
+    var peli_genero: String?
+    var peli_id: String?
+    var peli_nombre: String?
+    var peli_resumen: String?
+    var peli_urlImagen: String?
     
-    var peli_nombre     : String?
-    
-    var peli_genero     : String?
-    
-    var peli_urlImagen  : String?
-    
-    var peli_resumen    : String?
-    
-    var peli_año        : String?
 }
