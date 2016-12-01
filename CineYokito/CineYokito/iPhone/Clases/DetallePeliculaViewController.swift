@@ -29,8 +29,8 @@ class DetallePeliculaViewController: UIViewController {
             self.imgPelicula.image = image
         }
         
-        self.lblNombre.text = self.objPelicula.peli_nombre
-        self.lblResumen.text = self.objPelicula.peli_resumen
+        self.lblNombre.text = self.objPelicula!.peli_nombre
+        self.lblResumen.text = self.objPelicula!.peli_resumen
         
     
     }

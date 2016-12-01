@@ -20,15 +20,15 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtF-0j-Wuk">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="203" id="WXi-JQ-gY8"/>
-                                    <constraint firstAttribute="width" constant="320" id="tHf-eI-C6o"/>
+                                    <constraint firstAttribute="height" constant="203" id="iRg-fp-dRl"/>
+                                    <constraint firstAttribute="width" constant="320" id="mcF-g9-My0"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Image"/>
                                 <connections>
                                     <segue destination="wrA-0v-RCb" kind="show" identifier="PeliculaViewController" id="p6o-sb-0Ha"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CineMell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwN-HE-6GV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CineMeTo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwN-HE-6GV">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="AQf-Qr-9Kt"/>
                                 </constraints>
@@ -39,12 +39,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qtF-0j-Wuk" firstAttribute="top" secondItem="FwN-HE-6GV" secondAttribute="bottom" constant="46" id="PHg-rX-IZZ"/>
+                            <constraint firstItem="qtF-0j-Wuk" firstAttribute="centerX" secondItem="cpH-B1-SHP" secondAttribute="centerX" id="8a8-da-bz0"/>
                             <constraint firstAttribute="trailing" secondItem="FwN-HE-6GV" secondAttribute="trailing" constant="97" id="Wus-3J-M0K"/>
-                            <constraint firstItem="qtF-0j-Wuk" firstAttribute="leading" secondItem="cpH-B1-SHP" secondAttribute="leading" id="Y5x-ab-QM3"/>
                             <constraint firstItem="FwN-HE-6GV" firstAttribute="top" secondItem="96d-gi-lra" secondAttribute="bottom" constant="68" id="hfh-B1-3RD"/>
                             <constraint firstItem="FwN-HE-6GV" firstAttribute="leading" secondItem="cpH-B1-SHP" secondAttribute="leading" constant="97" id="pOf-cZ-Msx"/>
                             <constraint firstItem="FwN-HE-6GV" firstAttribute="centerX" secondItem="cpH-B1-SHP" secondAttribute="centerX" id="v52-vY-X6f"/>
+                            <constraint firstItem="qtF-0j-Wuk" firstAttribute="top" secondItem="FwN-HE-6GV" secondAttribute="bottom" constant="46" id="vsK-7i-Xsh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BWY-xx-YKn"/>
